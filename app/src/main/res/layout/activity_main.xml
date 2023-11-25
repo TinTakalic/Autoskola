@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/qTxt"
+        android:layout_width="320dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="75dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Ovo je pitanje koje se može pojaviti na testu."
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="@+id/qImg"
+        app:layout_constraintStart_toStartOf="@+id/qImg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/qImg"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:layout_marginBottom="192dp"
+        app:layout_constraintBottom_toBottomOf="@+id/B"
+        app:layout_constraintEnd_toEndOf="@+id/D"
+        app:layout_constraintStart_toStartOf="@+id/D"
+        app:layout_constraintTop_toBottomOf="@+id/qTxt"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <CheckBox
+        android:id="@+id/D"
+        android:layout_width="315dp"
+        android:layout_height="61dp"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/C"
+        app:layout_constraintEnd_toEndOf="@+id/C"
+        app:layout_constraintStart_toStartOf="@+id/C" />
+
+    <CheckBox
+        android:id="@+id/C"
+        android:layout_width="315dp"
+        android:layout_height="61dp"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/B"
+        app:layout_constraintEnd_toEndOf="@+id/B"
+        app:layout_constraintStart_toStartOf="@+id/B" />
+
+    <CheckBox
+        android:id="@+id/B"
+        android:layout_width="315dp"
+        android:layout_height="61dp"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/A"
+        app:layout_constraintEnd_toEndOf="@+id/A"
+        app:layout_constraintStart_toStartOf="@+id/A" />
+
+    <CheckBox
+        android:id="@+id/A"
+        android:layout_width="315dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="50dp"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/prgInd"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="1/38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="DALJE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
